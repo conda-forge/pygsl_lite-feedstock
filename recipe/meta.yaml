@@ -13,7 +13,7 @@ source:
 build:
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -54,7 +54,7 @@ about:
     pygsl_lite is a minimal wrapper around GSL based on the pygsl library.
     It contains a small feature set aimed at physics modelling. The reduced
     feature set, as well as supporting only modern GSL versions makes the
-    maintanance much simpler for small projects.
+    maintenance much simpler for small projects.
 
 extra:
   recipe-maintainers:
