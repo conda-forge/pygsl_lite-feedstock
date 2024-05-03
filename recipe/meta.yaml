@@ -1,5 +1,5 @@
 {% set name = "pygsl_lite" %}
-{% set version = "0.1.5" %}
+{% set version = "0.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygsl_lite-{{ version }}.tar.gz
-  sha256: d23944f034553a6e350305b088b6261f5854964cc481ecc15a0c5aca61560632
+  sha256: 31b0c24753416d3eacf46cadbfc7aabde38a1e75524931b41e583a0f86fb0517
 
 
 build:
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 0
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - swig >=4.0
   host:
     - gsl
