@@ -8,7 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygsl_lite-{{ version }}.tar.gz
   sha256: 31b0c24753416d3eacf46cadbfc7aabde38a1e75524931b41e583a0f86fb0517
-
+  patches:
+    - numpy_numeric_types.patch
 
 build:
   skip: true  # [win]
