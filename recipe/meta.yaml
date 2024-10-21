@@ -58,7 +58,7 @@ about:
   license_file: LICENSE
   description: |
     pygsl_lite is a minimal wrapper around GSL based on the pygsl library.
-    It contains a small feature set aimed at physics modelling. The reduced
+    It contains a small feature set aimed at physics modeling. The reduced
     feature set, as well as supporting only modern GSL versions makes the
     maintenance much simpler for small projects.
 

@@ -10,7 +10,7 @@ Package license: GPL-2.0-or-later
 Summary: Minimal GNU Scientific Library Interface
 
 pygsl_lite is a minimal wrapper around GSL based on the pygsl library.
-It contains a small feature set aimed at physics modelling. The reduced
+It contains a small feature set aimed at physics modeling. The reduced
 feature set, as well as supporting only modern GSL versions makes the
 maintenance much simpler for small projects.
 
@@ -245,7 +245,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@SergeiOssokine](https://github.com/SergeiOssokine/)
 * [@lorenzopompili00](https://github.com/lorenzopompili00/)
 * [@raffienficiaud](https://github.com/raffienficiaud/)
 
