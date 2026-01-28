@@ -1,5 +1,5 @@
 {% set name = "pygsl_lite" %}
-{% set version = "0.1.8rc2" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pygsl_lite-{{ version }}.tar.gz
-  sha256: ca73e75fc325a3bf4f03f10c9f0580856f9b66cef4b41a63c8c8028c98af3788
+  sha256: 3213755c71da61e9629551e088530130d28e27048cd5f3ba48deb8165e6df6de
 
 
 build:
