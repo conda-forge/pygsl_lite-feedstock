@@ -13,7 +13,7 @@ c_stdlib_version:
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge pygsl_lite_rc
+- conda-forge main
 gsl:
 - '2.7'
 macos_machine:
