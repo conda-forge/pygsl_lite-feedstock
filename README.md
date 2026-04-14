@@ -14,7 +14,6 @@ It contains a small feature set aimed at physics modeling. The reduced
 feature set, as well as supporting only modern GSL versions makes the
 maintenance much simpler for small projects.
 
-
 Current build status
 ====================
 
