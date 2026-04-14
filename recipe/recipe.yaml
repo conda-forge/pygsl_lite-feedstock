@@ -1,0 +1,72 @@
+schema_version: 1
+
+context:
+  name: pygsl_lite
+  version: 0.1.8
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pygsl_lite-${{ version }}.tar.gz
+  sha256: 3213755c71da61e9629551e088530130d28e27048cd5f3ba48deb8165e6df6de
+
+build:
+  number: 1
+  script: ${{ PYTHON }} -m pip install . -vv
+  skip:
+    - win
+
+requirements:
+  build:
+    - ${{ compiler("c") }}
+    - ${{ stdlib("c") }}
+    - swig >=4.0
+    - if: build_platform != target_platform
+      then:
+        - cython
+        - python
+        - cross-python_${{ target_platform }}
+        - numpy
+  host:
+    - gsl
+    - numpy
+    - pip
+    - python
+    - setuptools
+    - setuptools-scm >=3.4.3
+    - wheel
+  run:
+    - gsl
+    - numpy >=1.23
+    - python
+
+tests:
+  - files:
+      source:
+        - test/
+    requirements:
+      run:
+        - pip
+        - pytest
+    script:
+      - python -m pip check
+      - python -m pip show pygsl_lite
+      - python -m pytest test/
+
+about:
+  summary: Minimal GNU Scientific Library Interface
+  description: |
+    pygsl_lite is a minimal wrapper around GSL based on the pygsl library.
+    It contains a small feature set aimed at physics modeling. The reduced
+    feature set, as well as supporting only modern GSL versions makes the
+    maintenance much simpler for small projects.
+  homepage: https://github.com/AEI-ACR/pygsl_lite
+  license: GPL-2.0-or-later
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - lorenzopompili00
+    - raffienficiaud
